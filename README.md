@@ -8,9 +8,10 @@ A modern Flutter mobile banking application built using **MVVM Clean Architectur
 
 We welcome contributions from the community! If you are looking to collaborate:
 1. Fork this repository and clone the app.
-2. Open the comprehensive specifications file [flutter-banking-app-prompt-pack.md](file:///Users/georgeikwegbu/Developer/Github/Mobile/flutter_apps/GDG_Umuahia_clean_arch/flutter-banking-app-prompt-pack.md) to choose a feature.
+2. Open the comprehensive specifications file [flutter-banking-app-prompt-pack.md](file:///Users/georgeikwegbu/Developer/Github/Mobile/flutter_apps/GDG_Umuahia_clean_arch/flutter-banking-app-prompt-pack.md) to locate the requirements. Contributors can pick the next prompt/feature from this file and proceed with the implementation.
 3. Implement the feature following the project's Clean Architecture & MVVM guidelines.
 4. Submit a Pull Request (PR) targeting the **`develop`** branch for code review.
+   - **Note for PRs**: In your PR description, please explicitly specify which prompt/feature you worked on, and mark it with a ✅ (for example, "Prompt 6: Home page greetings ✅") to indicate completion and update the roadmap checklist accordingly.
 
 ### Feature Roadmap Checklist
 * [x] **Prompt 1**: Clean Architecture & folder layouts setup ✅

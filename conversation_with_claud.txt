@@ -1,0 +1,61 @@
+Act as an experienced Flutter engineer and user-centred design expert with extensive years of professional experience in best practices.
+
+I want to build a simple banking system, leveraging MVVM clean architecture folder setup with provider as state management, the repository pattern, and dependency injection.
+
+With the below app features, look out for anything else I might have missed and would need, and also generate a prompt I can copy and paste into my anti-gravity to achieve this. And to avoid being overwhelmed, partition the prompts in steps, as in , Prompt 1: <Title>
+
+
+App features:
+
+1. a splash screen.
+
+
+2. an onboarding screen, 3 swipeable sections with a skip functionality, a next button and a continue button at the last section.
+
+
+3. an authentication screen, which will request for username and password to login, then the option to signup.
+
+
+4. a forgot password screen, that accepts user's email, runs a simple duration waiting of 300ms to simulate network call, then notifies user that a new email setup link has been sent to them.
+
+
+5. a signup page, has a form just accepts first and last name, email (add the necessary regex to make sure its an email address), username and password (password must have 1 uppercase, 1 lowercase, alphanumeric and upto 6 characters or more). NB: these input fields are required.
+
+5b. When the user either logs in, or successfully signs up, send them to the navScreen, which would have a bottom navigation of the home, the profile.
+
+6. a home page which shows the greetings depending on the time of the day, Good morning | afternoon | evening , on the left side, and on the right a notification bell icon, which when tapped takes you to the notification screen, which shows all the notifications gotten from transfers, withdrawals. With the time, and an empty state if there isn't any .
+
+
+7. still on the same homepage, the next section, would be a horizontally slidable cards, showing the personal balance, total spent for that month, amount left to spend.
+
+
+8. the next section will be a moderately big banner, within it, would display, on the left showing your bank name, account number and account name, on the right showing your balance and an eye-reveal icon to toggle the amount to be displayed or not. Then beneath the to, a chip button for withdrawal and deposit.
+
+
+9. still on the homepage, The next section will show the activity log, with a text of Activities on the left, and on the right a text button of see all. Then beneath will be a listtile of 5 most recent activities, which should have a leading icon, title being the activity itself (like transfer or withdrawal) then trailing will be the amount.
+
+
+10. still on the homepage, The next section will be the investment section, which shows a horizontally slidable Boxes of investments, like real estate, farm investments, humanoid robots, startups VC. Also it should have the see all text button as well. which when clicked, takes user to the page for them to see all transactions history.
+
+11. When the user taps on the withdraw, this shows a bottomsheet, with a widget, a centred transparent centre input field, with a default value of 0, and the ₦ prefix, where the user can provide the amount to be withdrawn. Then the total amount shown beneath it. Make it a reactive state so that if user enters a number greater than the available amount, it changes the color of the input field to red and disables the withdraw button. But if the amount is less, then the withdraw button is active as it'll be disabled by default. Once the withdraw button is clicked, give a 300ms delay, closes the bottomsheet and move user to a new screen with the popscope set to false so users can tap or hit the back button; here the screen shows a congratulations 🎊 text with confetti throwing up, the amount withdrawn the date and the details, with a transaction id. And a share feature to share file as image. Then a back home button beneath that takes you to the homepage and a textbutton below it that says 'See transaction' that takes you to the 'See all of the activity' screen and then to the individual transaction.
+
+12. Same flow happens for the add money, but user can only add a max of 5million naira, and when the add money button is clicked, take 300ms, then take user to the Successful transaction screen.
+
+13. On the profile, the top will be a circle shape container with the initials of the user first and last name there, user can edit their name, see terms and conditions, privacy policy, faq, contact and help .these will be in a compact listtile and a caret right arrow as the trailing, to indicate its click able. then the current version of installed app and see the logout button, at the bottom
+
+14. When user clicks on edit profile, the bottomsheet comes up with the form input field to complete (this should be a reusable component).
+
+15. write a unit test for each feature
+
+16. Write a comprehensive README.md file explaining what the project is about, from cloning the repository to all the features or third-party SDk used.
+17. Any secret or env file should be checked in the .gitignore
+
+NB: Integrate a pull to refresh system where necessary.
+
+NB: To make the best out of the design, make an extensive research regarding the user-centered design, as the application cuts across people of all age ranges.
+
+NB: do a proper system design setup, with custom appcolor, text (title, label, caption, body and content) and make use of reusabel components where necessary to avoid code repeatitions, create utility folder, which wil have the reusable widgets, colors, theme setup, and utils class, where things like datetime are being formated.
+
+NB: Let each feature have its own mvvm folder setup, and a basecontroller, which tracks all the notifylistener for major actions, that way all features can have access to other features api status and act accordingly.
+
+
