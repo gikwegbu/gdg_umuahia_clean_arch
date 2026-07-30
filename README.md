@@ -4,6 +4,36 @@ A modern Flutter mobile banking application built using **MVVM Clean Architectur
 
 ---
 
+## 🤝 Open Source Contributions & Roadmap
+
+We welcome contributions from the community! If you are looking to collaborate:
+1. Fork this repository and clone the app.
+2. Open the comprehensive specifications file [flutter-banking-app-prompt-pack.md](file:///Users/georgeikwegbu/Developer/Github/Mobile/flutter_apps/GDG_Umuahia_clean_arch/flutter-banking-app-prompt-pack.md) to choose a feature.
+3. Implement the feature following the project's Clean Architecture & MVVM guidelines.
+4. Submit a Pull Request (PR) targeting the **`develop`** branch for code review.
+
+### Feature Roadmap Checklist
+* [x] **Prompt 1**: Clean Architecture & folder layouts setup ✅
+* [x] **Prompt 2**: Splash screen routing & onboarding state checks ✅
+* [x] **Prompt 3**: 3-stage swipeable Onboarding screen flow ✅
+* [x] **Prompt 4**: Authentication (Login layout & rate-limiting lockout) ✅
+* [x] **Prompt 5**: Forgot Password (Recover forms & persistent confirmations) ✅
+* [x] **Prompt 5b**: Signup & Registration inputs (Regex validation check & dynamic button enable) ✅
+* [ ] **Prompt 6**: Home page greetings (dynamic system clock title) & notification center ☑️
+* [ ] **Prompt 7**: Slidable balance, month spent, and limits cards carousel ☑️
+* [ ] **Prompt 8**: Apex credit card banner with eye-reveal togglers & deposit/withdraw chips ☑️
+* [ ] **Prompt 9**: Activity log overview list with "See all" log history redirects ☑️
+* [ ] **Prompt 10**: Horizontal investment boxes (VC startups, VC humanoid robots) ☑️
+* [ ] **Prompt 11**: Interactive Withdrawal bottom sheet with transparent Naira inputs & confetti ☑️
+* [ ] **Prompt 12**: Interactive Deposit/Add Money flow sheet up to ₦5,000,000 ☑️
+* [ ] **Prompt 13**: Profile dashboard with circle initials, settings list tiles, and logout triggers ☑️
+* [ ] **Prompt 14**: Edit profile bottom sheet forms ☑️
+* [x] **Prompt 15**: Unit tests for all completed components (Validators, Formatter, Auth VM rate lockout) ✅
+* [x] **Prompt 16**: Comprehensive README setup ✅
+* [x] **Prompt 17**: Git configuration & .gitignore setups ✅
+
+---
+
 ## 🚀 Architecture & Folder Layout
 
 The project follows a modular, feature-first structure that scales efficiently for large-scale production banking projects:
@@ -58,24 +88,6 @@ Use any of these pre-seeded credentials in the mock repository to log in:
 ### Account Option 2
 * **Username:** `apexuser` (or Email: `customer@apex.com`)
 * **Password:** `Password1`
-
----
-
-## 🌟 Key Features Completed
-
-### 1. Splash & Routing
-* Auto-checks secure storage for session keys and Hive cache for onboarding state.
-* Redirects automatically to the appropriate screen: first-launch Onboarding, Login screen, or Home dashboard.
-* Includes a static boolean flag `forceShowOnboarding` in `SplashViewModel` for toggling onboarding visibility during design sessions.
-
-### 2. Form Input Validations & Rate Limiting
-* **Signup Form**: Checks fields reactively on change (Email regex, password complexity rules). Automatically enables the "Create Account" button only when the form satisfies validation rules.
-* **Forgot Password View**: Replaces input forms on success with a persistent checkmark confirmation pane to replace transient snackbars.
-* **Security Lockout**: Tracks consecutive failed logins. On the 5th failed attempt, the ViewModel initiates a 30-second countdown lock, disables inputs, and displays live countdown warning messages.
-
-### 3. Responsive Styling & Screen Layouts
-* Supports system accessibility text font scaling. Views wrap inside `SingleChildScrollView` containers to prevent viewport overflows.
-* Follows AA color contrast compliance in light/dark themes.
 
 ---
 
