@@ -140,8 +140,9 @@ void main() {
     });
 
     test('Valid email calls repo and sets isResetLinkSent to true', () async {
-      when(() => mockRepo.requestPasswordReset(any()))
-          .thenAnswer((_) async => const Success<void>(null));
+      when(
+        () => mockRepo.requestPasswordReset(any()),
+      ).thenAnswer((_) async => const Success<void>(null));
 
       viewModel.emailController.text = 'user@example.com';
       final success = await viewModel.sendResetLink();
@@ -159,7 +160,10 @@ void main() {
     setUp(() {
       mockRepo = MockAuthRepository();
       mockNotifier = MockAppActivityNotifier();
-      viewModel = SignupViewModel(authRepository: mockRepo, activityNotifier: mockNotifier);
+      viewModel = SignupViewModel(
+        authRepository: mockRepo,
+        activityNotifier: mockNotifier,
+      );
     });
 
     test('Initial state is invalid and clean', () {
